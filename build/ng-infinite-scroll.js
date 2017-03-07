@@ -1,4 +1,4 @@
-/* ng-infinite-scroll - v1.3.0 - 2016-06-30 */
+/* ng-infinite-scroll - v1.3.0 - 2017-03-07 */
 angular.module('infinite-scroll', []).value('THROTTLE_MILLISECONDS', null).directive('infiniteScroll', [
   '$rootScope', '$window', '$interval', 'THROTTLE_MILLISECONDS', function($rootScope, $window, $interval, THROTTLE_MILLISECONDS) {
     return {
@@ -178,7 +178,7 @@ angular.module('infinite-scroll', []).value('THROTTLE_MILLISECONDS', null).direc
             handler();
           }
           return $interval.cancel(checkInterval);
-        }));
+        }), 0);
       }
     };
   }

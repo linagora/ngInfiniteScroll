@@ -203,7 +203,7 @@ angular.module('infinite-scroll', [])
       if immediateCheck
         handler()
       $interval.cancel checkInterval
-    )
+    ), 0
 ]
 if typeof module != "undefined" && typeof exports != "undefined" && module.exports == exports
   module.exports = 'infinite-scroll'
